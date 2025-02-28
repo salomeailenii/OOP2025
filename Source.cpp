@@ -19,14 +19,78 @@ int numar(char* x)
 int main()
 {
     FILE* fptr;
-    fptr = fopen("ini.txt", "r");
-    while 
+    char l[256];
+    int suma = 0;
 
+    fptr = fopen("in.txt", "r");
 
+    while (fgets(l, sizeof(l), fptr))
+    {
+        int sum = 0;
+        char* p = l;
+
+        while (*p)
+        {
+            if (*p >= '0' && *p <= '9')
+            {
+                sum += numar(p);
+                while (*p >= '0' && *p <= '9')
+                    p++; 
+            }
+            else
+            {
+                p++;
+            }
+        }
+        suma += sum;
+    }
+
+    fclose(fptr);
+
+    printf("%d\n", suma);
+    return 0;
 
 }
 
 // problema 2
+
+int nrLitere(char* cuv)
+{
+    int nr = 0;
+    while (cuv[nr] != '\0')
+        nr++;
+    return nr;
+}
+
+int main()
+{
+    char text[256];
+    char* aux[20];
+    int lg[20], nr = 0;
+    scanf(" %[^\n]", text);
+    char* p = strtok(text, " ");
+    while (p) {
+        aux[nr] = p;
+        lg[nr] = nrLitere(p);
+        nr++;
+        p = strtok(NULL, " ");
+    }
+
+    for( int i = 0; i < nr -1; i++)
+        for (int j = i + 1; j < nr; j++) {
+            if (lg[i] < lg[j])
+            {
+                int auxx = lg[i];
+                lg[i] = lg[j];
+                lg[j] = auxx;
+                char* auxcuv = aux[i];
+                aux[i] = aux[j];
+                aux[j] = auxcuv;
+            }
+        }
+    for (int i = 0; i < nr; i++)
+        printf("%s\n", aux[i]);
+}
 
 // problema 3
 
