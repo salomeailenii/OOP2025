@@ -20,16 +20,6 @@ bool NumberList::Add(int x)
 
 void NumberList::Sort()
 {
-	/*
-	for( int i = 1; i < count; i++)
-		for( int j = i+1; j <= count ; j++)
-			if (numbers[j] < numbers[i])
-			{
-				int aux = numbers[i];
-				numbers[i] = numbers[j];
-				numbers[j] = aux;
-			}
-	*/
 	sort(numbers, numbers + count);
 }
 
