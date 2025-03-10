@@ -5,7 +5,7 @@ void Student::setName (const string& n)
 	nume = n;
 }
 
-string Student::getName() const
+string Student::getName()
 {
 	return nume;
 }
@@ -17,7 +17,7 @@ bool Student::setNotaMate(float nota)
 	notaMate = nota;
 }
 
-float Student::getNotaMate() const
+float Student::getNotaMate()
 {
 	return notaMate;
 }
@@ -30,7 +30,7 @@ bool Student::setNotaEngl(float nota)
 
 }
 
-float Student::getNotaEngl() const
+float Student::getNotaEngl()
 {
 	return notaEngl;
 }
@@ -43,12 +43,12 @@ bool Student::setNotaIsto(float nota)
 
 }
 
-float Student::getNotaIsto() const
+float Student::getNotaIsto()
 {
 	return notaIsto;
 }
 
-float Student::getMedie() const
+float Student::getMedie()
 {
 	return (notaMate + notaEngl + notaIsto)/3;
 }
