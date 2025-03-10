@@ -1,19 +1,19 @@
 #include <iostream>
-#include "NumberList.h"
+#include "Math.h"
+
 using namespace std;
 
-int main()
-{
-	NumberList x;
-	x.Init();
-	x.Add(7);
-	x.Add(2);
-	x.Add(9);
-	x.Add(4);
-	x.Sort();
-	cout << "Lista sortata: ";
-	x.Print();
-
-
+int main() {
+	Math x;
+	cout << x.Add(3, 5) << endl;
+	cout << x.Add(3, 5, 2) << endl;
+	cout << x.Add(3.5, 5.1) << endl;
+	cout << x.Add(3.3, 5.1, 2.2) << endl;
+	cout << x.Mul(3, 5) << endl;
+	cout << x.Mul(3, 5, 2) << endl;
+	cout << x.Mul(3.5, 5.1) << endl;
+	cout << x.Mul(3.5, 5.1, 2.2) << endl;
+	cout << x.Add(7, 2, 3, 4, 5, 6, 7, 3) << endl;
+	cout << x.Add("3", "5") << endl;
 	return 0;
 }
