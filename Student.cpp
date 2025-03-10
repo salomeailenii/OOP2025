@@ -15,7 +15,6 @@ bool Student::setNotaMate(float nota)
 	if(nota < 1.0f || nota > 10.0f)
 		return false;
 	notaMate = nota;
-	return true;
 }
 
 float Student::getNotaMate() const
@@ -28,7 +27,7 @@ bool Student::setNotaEngl(float nota)
 	if (nota < 1.0f || nota > 10.0f)
 		return false;
 	notaEngl = nota;
-	return true;
+
 }
 
 float Student::getNotaEngl() const
@@ -41,7 +40,7 @@ bool Student::setNotaIsto(float nota)
 	if (nota < 1.0f || nota > 10.0f)
 		return false;
 	notaIsto = nota;
-	return true;
+
 }
 
 float Student::getNotaIsto() const
