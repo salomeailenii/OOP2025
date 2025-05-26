@@ -63,7 +63,8 @@ public:
     ArrayIterator<T>& operator= (const ArrayIterator<T>& other) {
         if (this != &other) {
             this->Current = other.Current;
-            this->pArray = other.pArrey;
+            this->List = other.List;
+            this->Size = other.Size;
         }
         return *this;
     }
